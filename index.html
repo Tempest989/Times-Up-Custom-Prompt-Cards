@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>Custom Time's Up Cards</title>
+		<link rel="stylesheet" href="./styles.css">
+	</head>
+	<body>
+
+		<h1 id="title">Time's Up Cards</h1>
+		
+		<div id="hide-card-area" class="hidden">
+			<div id="card-area">
+				<div id="card1" class="card">
+					<div id="card1-front" class="front-card hidden">
+						<span class="drawing-1 prompt"><span>Drawing 1</span><span class="card1">Prompt</span></span>
+						<span class="speaking-1 prompt"><span>Speaking 1</span><span class="card1">Prompt</span></span>
+						<span class="acting-1 prompt"><span>Acting 1</span><span class="card1">Prompt</span></span>
+						<span class="drawing-2 prompt"><span>Drawing 2</span><span class="card1">Prompt</span></span>
+						<span class="speaking-2 prompt"><span>Speaking 2</span><span class="card1">Prompt</span></span>
+						<span class="acting-2 prompt"><span>Acting 2</span><span class="card1">Prompt</span></span>
+					</div>
+					<div id="card1-back" class="back-card" onclick="revealCard(0)"><span>Click To Reveal Card</span></div>
+				</div>
+				<div id="card2" class="card">
+					<div id="card2-front" class="front-card hidden">
+						<span class="drawing-1 prompt"><span>Drawing 1</span><span class="card2">Prompt</span></span>
+						<span class="speaking-1 prompt"><span>Speaking 1</span><span class="card2">Prompt</span></span>
+						<span class="acting-1 prompt"><span>Acting 1</span><span class="card2">Prompt</span></span>
+						<span class="drawing-2 prompt"><span>Drawing 2</span><span class="card2">Prompt</span></span>
+						<span class="speaking-2 prompt"><span>Speaking 2</span><span class="card2">Prompt</span></span>
+						<span class="acting-2 prompt"><span>Acting 2</span><span class="card2">Prompt</span></span>
+					</div>
+					<div id="card2-back" class="back-card" onclick="revealCard(1)"><span>Click To Reveal Card</span></div>
+				</div>
+				<div id="card3" class="card">
+					<div id="card3-front" class="front-card hidden">
+						<span class="drawing-1 prompt"><span>Drawing 1</span><span class="card3">Prompt</span></span>
+						<span class="speaking-1 prompt"><span>Speaking 1</span><span class="card3">Prompt</span></span>
+						<span class="acting-1 prompt"><span>Acting 1</span><span class="card3">Prompt</span></span>
+						<span class="drawing-2 prompt"><span>Drawing 2</span><span class="card3">Prompt</span></span>
+						<span class="speaking-2 prompt"><span>Speaking 2</span><span class="card3">Prompt</span></span>
+						<span class="acting-2 prompt"><span>Acting 2</span><span class="card3">Prompt</span></span>
+					</div>
+					<div id="card3-back" class="back-card" onclick="revealCard(2)"><span>Click To Reveal Card</span></div>
+				</div>
+			</div>
+			<div id="card-buttons">
+				<button onclick="shuffleCards()">Re-Shuffle Deck</button>
+				<button onclick="drawCards()">Draw 3 Cards</button>
+			</div>
+		</div>
+
+		<button id="start-button" onclick="setupCards()">Shuffle Deck & Draw 3 Cards</button>
+
+		<script src="./script.js"></script>
+	</body>
+</html>

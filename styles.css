@@ -1,0 +1,33 @@
+html, body { height: 100%; width: 100%; margin:0;  padding: 0; overflow: hidden; background-color:dodgerblue; }
+
+#title { color:darkorange; text-align: center; -webkit-text-stroke: 1px white; font-family: Arial, Helvetica, sans-serif; font-size: 3vw; }
+
+#card-area { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center; align-content: center; }
+
+.card { border: 0.1vw white solid; width: 30vh; height: 75vh; font-family: Arial, Helvetica, sans-serif; }
+
+.front-card { display: flex; height: 100%; width: 100%; flex-direction: column; flex-wrap: wrap; justify-content: space-evenly; align-items: center; align-content: center; }
+
+.back-card { display: flex; height: 100%; font-size: 2vh; font-weight: bold; align-items: center; justify-content: center; }
+
+.hidden { display: none; }
+
+.black-border { border: 0.2vw black solid; }
+
+.prompt { display: flex; justify-content: space-between; width: 80%; text-align: center; border-radius: 15px; padding: 1vw; }
+
+.drawing-1 { background-color: crimson; }
+
+.drawing-2 { background-color: burlywood; }
+
+.speaking-1 { background-color: darkgreen; }
+
+.speaking-2 { background-color: blueviolet; }
+
+.acting-1 { background-color: darkorchid; }
+
+.acting-2 { background-color: gold; }
+
+#start-button { position: absolute; left: 44%; top: 44vh; }
+
+#card-buttons { display: flex; margin: auto; margin-top: 6.5vh; width: 80%; justify-content: space-between; }
