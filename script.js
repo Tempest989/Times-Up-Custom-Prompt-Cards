@@ -4,12 +4,30 @@ const frontCards = [document.getElementById("card1-front"), document.getElementB
 const backCards = [document.getElementById("card1-back"), document.getElementById("card2-back"), document.getElementById("card3-back")];
 const cardPrompts = [document.getElementsByClassName("card1"), document.getElementsByClassName("card2"), document.getElementsByClassName("card3")];
 
-const drawing1 = ["Example Drawing-1 Answer: 1", "Example Drawing-1 Answer: 2", "Example Drawing-1 Answer: 3", "Example Drawing-1 Answer: 4", "Example Drawing-1 Answer: 5"];
-const drawing2 = ["Example Drawing-2 Answer: 1", "Example Drawing-2 Answer: 2", "Example Drawing-2 Answer: 3", "Example Drawing-2 Answer: 4", "Example Drawing-2 Answer: 5"];
-const speaking1 = ["Example Speaking-1 Answer: 1", "Example Speaking-1 Answer: 2", "Example Speaking-1 Answer: 3", "Example Speaking-1 Answer: 4", "Example Speaking-1 Answer: 5"];
-const speaking2 = ["Example Speaking-2 Answer: 1", "Example Speaking-2 Answer: 2", "Example Speaking-2 Answer: 3", "Example Speaking-2 Answer: 4", "Example Speaking-2 Answer: 5"];
-const acting1 = ["Example Acting-1 Answer: 1", "Example Acting-1 Answer: 2", "Example Acting-1 Answer: 3", "Example Acting-1 Answer: 4", "Example Acting-1 Answer: 5"];
-const acting2 = ["Example Acting-2 Answer: 1", "Example Acting-2 Answer: 2", "Example Acting-2 Answer: 3", "Example Acting-2 Answer: 4", "Example Acting-2 Answer: 5"];
+// DO NOT EDIT ABOVE THIS LINE!
+
+// Place Custom Prompts into arrays below in their respective Categories. Examples of how these will work are shown below so feel free to add your own and see how they work on the webpage.
+
+const drawing1 = [
+	"Example Drawing-1 Answer: 1", "Example Drawing-1 Answer: 2", "Example Drawing-1 Answer: 3", "Example Drawing-1 Answer: 4", "Example Drawing-1 Answer: 5"
+];
+const drawing2 = [
+	"Example Drawing-2 Answer: 1", "Example Drawing-2 Answer: 2", "Example Drawing-2 Answer: 3", "Example Drawing-2 Answer: 4", "Example Drawing-2 Answer: 5"
+];
+const speaking1 = [
+	"Example Speaking-1 Answer: 1", "Example Speaking-1 Answer: 2", "Example Speaking-1 Answer: 3", "Example Speaking-1 Answer: 4", "Example Speaking-1 Answer: 5"
+];
+const speaking2 = [
+	"Example Speaking-2 Answer: 1", "Example Speaking-2 Answer: 2", "Example Speaking-2 Answer: 3", "Example Speaking-2 Answer: 4", "Example Speaking-2 Answer: 5"
+];
+const acting1 = [
+	"Example Acting-1 Answer: 1", "Example Acting-1 Answer: 2", "Example Acting-1 Answer: 3", "Example Acting-1 Answer: 4", "Example Acting-1 Answer: 5"
+];
+const acting2 = [
+	"Example Acting-2 Answer: 1", "Example Acting-2 Answer: 2", "Example Acting-2 Answer: 3", "Example Acting-2 Answer: 4", "Example Acting-2 Answer: 5"
+];
+
+// DO NOT EDIT BELOW THIS LINE!
 
 let cardsLeft = -1;
 let previousCard = -1;
@@ -59,7 +77,6 @@ const assignPrompt = (type) => {
 }
 
 const revealCard = (cardNum) => {
-	// console.log("cardNum = ", cardNum);
 	cardPrompts[cardNum][0].innerText = assignPrompt("d1");
 	cardPrompts[cardNum][1].innerText = assignPrompt("s1");
 	cardPrompts[cardNum][2].innerText = assignPrompt("a1");
@@ -68,11 +85,9 @@ const revealCard = (cardNum) => {
 	cardPrompts[cardNum][5].innerText = assignPrompt("a2");
 	backCards[cardNum].classList.add("hidden");
 	frontCards[cardNum].classList.remove("hidden");
-	// console.log("before previousCard = ", previousCard);
 	if (previousCard !== -1)
 		frontCards[previousCard].parentNode.classList.add("black-border");
 	previousCard = cardNum;
-	// console.log("after previousCard = ", previousCard);
 	cardCounter++;
 	if (cardCounter >= cardsLeft)
 		cardCounter = 0;
